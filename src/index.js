@@ -1,7 +1,8 @@
 import express from 'express';
 import morgan from 'morgan'
+import routesorder from './routes/order.routes.js'
 
-const app = Express()
+const app = express()
 
 app.use(express.json());
 
@@ -9,7 +10,8 @@ app.set('port', process.env.PORT || 6000);
 
 app.use(morgan('dev'));
 
-//app.use('/api', routesUser);
+//Routes
+app.use('/api', routesorder);
 
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
