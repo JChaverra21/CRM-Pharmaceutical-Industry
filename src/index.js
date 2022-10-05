@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.json());
 
-app.set('port', process.env.PORT || 6000);
+app.set('port', 3000);
 
 app.use(morgan('dev'));
 
