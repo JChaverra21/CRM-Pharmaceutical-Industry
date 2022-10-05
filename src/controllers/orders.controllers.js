@@ -25,3 +25,16 @@ export const postOrders = async (req, res) => {
         price
     });
 }
+
+export const deleteOrders = async (req, res) => {
+    const [rows] = await pool.query('DELETE FROM orders WHERE id_Order=?',
+    [req.params.id_Order]);
+
+    console.log(rows);
+
+    if(rows.affectedRows == 0) return res.status(404).json({
+        mensaje: 'Order not found'
+    })
+
+    res.send('Order delete')
+};
