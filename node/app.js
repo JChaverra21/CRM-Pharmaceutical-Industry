@@ -24,7 +24,7 @@ try {
     await datab.authenticate()
     console.log('Conexion exitosa')
 } catch (error) {
-    console,log(`El error de conexion es: ${error}`)
+    console.log(`El error de conexion es: ${error}`)
 }
 
 app.listen(app.get('port'), () => {
