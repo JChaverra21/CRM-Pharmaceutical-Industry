@@ -59,7 +59,7 @@ export const updateOrder = async (req, res) => {
         } catch (error) {
             res.json( {message: error.message} )
         }
-}
+    }
 }
 
 /*export const updateOrders = async (req, res) => {
